@@ -1,5 +1,6 @@
 install:
     npm install
+    
 start:
     npx babel-node src/index.js
 build:
