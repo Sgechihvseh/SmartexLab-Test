@@ -1,0 +1,61 @@
+.Keyboard{
+	position: fixed;
+	left: 0;
+	bottom: 10px;
+	width: 100%;
+	padding: 5px 0;
+	background: #004134;
+	box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+	user-select: none;
+	transition: bottom 0.4s;
+}
+.KeyboardKeys{
+	text-align: center;
+	width: 1200px;
+	margin: 0 auto;
+}
+.KeyboardKey{
+	
+	height: 45px;
+	width: 6%;
+	max-width: 90px;
+	margin: 3px;
+	border-radius:  4px;
+	border: none;
+	background: rgba(255, 255, 255, 0.2);
+	color: white;
+	font-size: 1.05rem;
+	outline: none;
+	cursor: pointer;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	vertical-align: top;
+	padding: 0;
+	position: relative;
+}
+
+.KeyboardKey:active{
+	background: rgba(255, 255, 255, 0.1);
+}
+.KeyboardKeyWide{
+	width: 12%;
+	
+}
+.KeyboardKeyExtraWide{
+	width: 36%;
+	max-width: 500px;
+}
+.KeyboardKeyActivatable::after{
+	content: '';
+	top: 10px;
+	right: 10px;
+	position: absolute;
+	width: 8px;
+	height: 8px;
+	background: rgba(0, 0, 0, 0.4);
+	border-radius: 50%;
+}
+.KeyboardKeyActive::after{
+	background: blue;
+}

@@ -1,6 +1,7 @@
 plugins:
   - babel
   - jest
+  - react
 env:
   node: true
   jest: true
@@ -8,5 +9,7 @@ parser: babel-eslint
 extends:
   - 'airbnb-base'
   - 'plugin:jest/recommended'
+  - 'plugin:react/recommended'
 rules:
   no-console: 0
+  linebreak-style: 0
