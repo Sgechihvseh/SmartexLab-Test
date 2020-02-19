@@ -4,12 +4,32 @@ import Keys from './Keys/Keys';
 
 const Keyboard = (props) => {
 	// debugger;
-	return (
-		<div className="KeyboardKeys">		
-			<Keys state={props.state}/>
-			<button className="KeyboardKey KeyboardKeyExtraWide"><i class="material-icons">space_bar</i></button>
-		</div>
+	let changeText = () => {
+		let key = event.target.value;
+		switch (key) {
+			case "backspace":
+				props.deleteKey();
+				break;
+			// case "input":
+			case "keyboard_capslock":
+				props.capsLock();
+				break;
+			case "space_bar":
+				props.addSpace();
+				break;
+			case "EN/RU":
+				props.changeLanguage();
+				break;
+			default:
+				props.addKey(event.target.value);
+				break;
+		}
 
+	}
+	return (
+		<div onClick = {changeText} className="KeyboardKeys">		
+			<Keys state={props.state}/>
+		</div>
 	)
 }
 

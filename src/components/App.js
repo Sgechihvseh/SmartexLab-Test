@@ -8,7 +8,13 @@ const App = (props) => {
                 <h1>My React App!</h1>
 				<textarea value = {props.state.text}/>
 				<div className="Keyboard">
-					<Keyboard state={props.state}/>
+					<Keyboard state={props.state}
+					deleteKey = {props.deleteKey}
+					capsLock = {props.capsLock}
+					addKey = {props.addKey}
+					addSpace = {props.addSpace}
+					changeLanguage= {props.changeLanguage}
+					/>
 				</div>
             </div>
         )
